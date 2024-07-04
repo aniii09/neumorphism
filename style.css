@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background: #484949;
+}
+
+input{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 200px;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    border: 5px solid #484949;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.6),
+                -10px -10px 15px rgba(255,255,255,0.125);
+    transition: 0.5s ease;            
+}
+
+input::after{
+    font-family: "Font Awesome 6 Free";
+    content: "\f0f3";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: rgb(216, 224, 231);
+}
+
+input:checked{
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6) ,
+                -10px -10px 15px rgba(255, 255, 255, 0.125),
+                inset 10px 10px 15px rgba(0, 0, 0, 0.6) ,
+                inset -10px -10px 15px rgba(255, 255, 255, 0.125);
+}
+
+input:checked::after{
+    color: rgb(0, 255, 106);
+}
